@@ -14,6 +14,9 @@ This is my second comment - Matt
 
 
 My first ahre of info
-Atnoy's second comment
+<<<<<<< HEAD
 
  A message for everybody
+=======
+Atnoy's second comment
+>>>>>>> 6f4682603236264f6f4282530f302c3b16a29c0c
