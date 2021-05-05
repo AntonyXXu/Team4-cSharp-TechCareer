@@ -29,8 +29,8 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEditPackage = new System.Windows.Forms.Button();
             this.btnAddPackage = new System.Windows.Forms.Button();
@@ -139,9 +139,9 @@ namespace Travel
             // PkgBasePrice
             // 
             this.PkgBasePrice.DataPropertyName = "PkgBasePrice";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.PkgBasePrice.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.PkgBasePrice.DefaultCellStyle = dataGridViewCellStyle7;
             this.PkgBasePrice.HeaderText = "Base Price";
             this.PkgBasePrice.Name = "PkgBasePrice";
             this.PkgBasePrice.ReadOnly = true;
@@ -149,9 +149,9 @@ namespace Travel
             // PkgAgencyCommission
             // 
             this.PkgAgencyCommission.DataPropertyName = "PkgAgencyCommission";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.PkgAgencyCommission.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.PkgAgencyCommission.DefaultCellStyle = dataGridViewCellStyle8;
             this.PkgAgencyCommission.HeaderText = "Commission";
             this.PkgAgencyCommission.Name = "PkgAgencyCommission";
             this.PkgAgencyCommission.ReadOnly = true;
@@ -163,9 +163,9 @@ namespace Travel
             this.btnAddProducts.Name = "btnAddProducts";
             this.btnAddProducts.Size = new System.Drawing.Size(166, 57);
             this.btnAddProducts.TabIndex = 4;
-            this.btnAddProducts.Text = "Add/Edit Package Products";
+            this.btnAddProducts.Text = "View/Edit Package Products";
             this.btnAddProducts.UseVisualStyleBackColor = true;
-            this.btnAddProducts.Click += new System.EventHandler(this.btnEditPackage_Click);
+            this.btnAddProducts.Click += new System.EventHandler(this.btnAddProducts_Click);
             // 
             // frmPackageList
             // 

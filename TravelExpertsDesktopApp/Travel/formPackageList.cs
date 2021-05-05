@@ -20,6 +20,11 @@ namespace Travel
             context = new TravelExpertsContext();
         }
 
+        private Package getSelected()
+        {
+            int selection = Convert.ToInt32(dataGVPackages.CurrentRow.Cells[0].FormattedValue);
+            return context.Packages.Find(selection);
+        }
         private void display()
         {
             var products = context.Packages
@@ -51,12 +56,9 @@ namespace Travel
 
         private void btnEditPackage_Click(object sender, EventArgs e)
         {
-            int selection = Convert.ToInt32(dataGVPackages.CurrentRow.Cells[0].FormattedValue);
-            Package current = context.Packages.Find(selection);
-            formAddPackage newForm = new formAddPackage(false, current);
-            newForm.context = context;
-            
-            //newForm.current = 
+            Package current = getSelected();
+            formAddPackage newForm = new formAddPackage(false, current, context);
+                        
             DialogResult result = newForm.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -67,6 +69,12 @@ namespace Travel
         private void frmPackageList_Load(object sender, EventArgs e)
         {
             display();
+        }
+
+        private void btnAddProducts_Click(object sender, EventArgs e)
+        {
+            Package current = getSelected();
+            formEditPackageProducts newForm = new formEditPackageProducts(current, context);
         }
     }
 }

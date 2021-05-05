@@ -12,17 +12,18 @@ namespace Travel
 {
     public partial class formAddPackage : Form
     {
-        public TravelExpertsContext context { get; set; }
-        public formAddPackage(bool adding, Package curr)
+        
+        public formAddPackage(bool adding, Package curr, TravelExpertsContext con)
         {
             InitializeComponent();
             add = adding;
             current = curr;
+            context = con;
         }
 
         private bool add;
-        public Package current { get; set; }
-
+        private Package current { get; set; }
+        private TravelExpertsContext context;
         private void formAddPackage_Load(object sender, EventArgs e)
         {
             if (!add)
