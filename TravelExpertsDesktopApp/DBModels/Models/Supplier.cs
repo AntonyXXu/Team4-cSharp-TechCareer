@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace TravelExpertsDesktopApp.TravelExpertsModels
+namespace DBModels.Models
 {
     [Index(nameof(SupplierId), Name = "SupplierId")]
     public partial class Supplier

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace TravelExpertsDesktopApp.TravelExpertsModels
+namespace DBModels.Models
 {
     [Table("Customers_Rewards")]
     [Index(nameof(CustomerId), Name = "CustomersCustomers_Rewards")]

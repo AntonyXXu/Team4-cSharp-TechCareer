@@ -1,7 +1,7 @@
 ﻿
-namespace TravelExpertsDesktopApp
+namespace Travel
 {
-    partial class TravelExperts
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,18 +29,10 @@ namespace TravelExpertsDesktopApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1750, 700);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TravelExpertsDesktopApp
+namespace Travel
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace TravelExpertsDesktopApp
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TravelExperts());
+            Application.Run(new Form1());
         }
     }
 }
