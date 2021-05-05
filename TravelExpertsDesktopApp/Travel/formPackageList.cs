@@ -44,7 +44,7 @@ namespace Travel
         }
         private void btnAddPackage_Click(object sender, EventArgs e)
         {
-            formAddPackage newForm = new formAddPackage(true, null);
+            formAddPackage newForm = new formAddPackage(true, null, context);
             newForm.ShowDialog();
             display();
         }
@@ -58,7 +58,7 @@ namespace Travel
         {
             Package current = getSelected();
             formAddPackage newForm = new formAddPackage(false, current, context);
-                        
+
             DialogResult result = newForm.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -75,6 +75,7 @@ namespace Travel
         {
             Package current = getSelected();
             formEditPackageProducts newForm = new formEditPackageProducts(current, context);
+            newForm.ShowDialog();
         }
     }
 }

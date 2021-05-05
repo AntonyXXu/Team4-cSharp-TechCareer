@@ -53,7 +53,7 @@ namespace Travel
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(616, 352);
+            this.btnExit.Location = new System.Drawing.Point(779, 430);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(129, 49);
             this.btnExit.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace Travel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(920, 491);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblProductNameVal);
             this.Controls.Add(this.lblProductName);
