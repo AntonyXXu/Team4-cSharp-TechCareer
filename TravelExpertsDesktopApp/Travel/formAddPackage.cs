@@ -12,7 +12,7 @@ namespace Travel
 {
     public partial class formAddPackage : Form
     {
-        
+
         public formAddPackage(bool adding, Package curr, TravelExpertsContext con)
         {
             InitializeComponent();
