@@ -7,23 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DBModels.Models;
-using System.Configuration;
 
-
-namespace Travel
+namespace TravelExpertsDesktopApp
 {
     public partial class Form1 : Form
     {
-
-        TravelExpertsContext context;
-
         public Form1()
         {
             InitializeComponent();
-            context = new TravelExpertsContext();
-            TravelExpertsContext.connectString =
-                ConfigurationManager.ConnectionStrings["TravelExperts"].ConnectionString;
         }
 
     }
