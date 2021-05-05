@@ -92,7 +92,7 @@ namespace Travel
             this.dataGVPackages.Name = "dataGVPackages";
             this.dataGVPackages.RowTemplate.Height = 25;
             this.dataGVPackages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGVPackages.Size = new System.Drawing.Size(903, 281);
+            this.dataGVPackages.Size = new System.Drawing.Size(904, 281);
             this.dataGVPackages.TabIndex = 2;
             // 
             // PackageID
@@ -101,13 +101,13 @@ namespace Travel
             this.PackageID.HeaderText = "PackageID";
             this.PackageID.Name = "PackageID";
             this.PackageID.ReadOnly = true;
+            this.PackageID.Width = 80;
             // 
             // PkgName
             // 
             this.PkgName.DataPropertyName = "PkgName";
             this.PkgName.HeaderText = "Name";
             this.PkgName.Name = "PkgName";
-            this.PkgName.ReadOnly = true;
             this.PkgName.Width = 160;
             // 
             // PkgStartDate
@@ -115,42 +115,38 @@ namespace Travel
             this.PkgStartDate.DataPropertyName = "PkgStartDate";
             this.PkgStartDate.HeaderText = "Start Date";
             this.PkgStartDate.Name = "PkgStartDate";
-            this.PkgStartDate.ReadOnly = true;
             // 
             // PkgEndDate
             // 
             this.PkgEndDate.DataPropertyName = "PkgEndDate";
             this.PkgEndDate.HeaderText = "End Date";
             this.PkgEndDate.Name = "PkgEndDate";
-            this.PkgEndDate.ReadOnly = true;
             // 
             // PkgDesc
             // 
             this.PkgDesc.DataPropertyName = "PkgDesc";
             this.PkgDesc.HeaderText = "Description";
             this.PkgDesc.Name = "PkgDesc";
-            this.PkgDesc.ReadOnly = true;
-            this.PkgDesc.Width = 200;
+            this.PkgDesc.Width = 240;
             // 
             // PkgBasePrice
             // 
             this.PkgBasePrice.DataPropertyName = "PkgBasePrice";
             this.PkgBasePrice.HeaderText = "Base Price";
             this.PkgBasePrice.Name = "PkgBasePrice";
-            this.PkgBasePrice.ReadOnly = true;
             // 
             // PkgAgencyCommission
             // 
             this.PkgAgencyCommission.DataPropertyName = "PkgAgencyCommission";
             this.PkgAgencyCommission.HeaderText = "Commission";
             this.PkgAgencyCommission.Name = "PkgAgencyCommission";
-            this.PkgAgencyCommission.ReadOnly = true;
+            this.PkgAgencyCommission.Width = 80;
             // 
             // frmPackageList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 450);
+            this.ClientSize = new System.Drawing.Size(964, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEditPackage);
             this.Controls.Add(this.btnAddPackage);

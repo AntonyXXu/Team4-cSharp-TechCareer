@@ -35,10 +35,13 @@ namespace Travel
                      p.PkgAgencyCommission
                  }).ToList();
             dataGVPackages.DataSource = products;
+            dataGVPackages.Rows[0].Selected = true;
         }
         private void btnAddPackage_Click(object sender, EventArgs e)
         {
-
+            formAddPackage newForm = new formAddPackage(true, null);
+            newForm.ShowDialog();
+            display();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -48,7 +51,17 @@ namespace Travel
 
         private void btnEditPackage_Click(object sender, EventArgs e)
         {
-
+            int selection = Convert.ToInt32(dataGVPackages.CurrentRow.Cells[0].FormattedValue);
+            Package current = context.Packages.Find(selection);
+            formAddPackage newForm = new formAddPackage(false, current);
+            newForm.context = context;
+            
+            //newForm.current = 
+            DialogResult result = newForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                display();
+            }
         }
 
         private void frmPackageList_Load(object sender, EventArgs e)
