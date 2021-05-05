@@ -38,7 +38,8 @@ namespace Travel
         private void comboProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboSupplier.DataSource = context.ProductsSuppliers
-                .Where( supp => supp.ProductId == Convert.ToInt32(comboProduct.ValueMember))
+                .Where(supp => supp.ProductId == Convert.ToInt32(comboProduct.ValueMember));
+                
         }
     }
 }

@@ -49,6 +49,12 @@ namespace Travel
         {
             decimal basePrice, commission;
             DateTime start, end;
+            if (rtxtDesc.Text == "" ||
+             rtxtPkgName.Text == "")
+            {
+                MessageBox.Show("The description and name must not be empty");
+                return;
+            }
             if (!Decimal.TryParse(txtBasePrice.Text, out basePrice))
             {
                 MessageBox.Show("Please enter a valid base price");
@@ -57,6 +63,11 @@ namespace Travel
             if (!Decimal.TryParse(txtCommission.Text, out commission))
             {
                 MessageBox.Show("Please enter a valid commission");
+                return;
+            }
+            if (commission > basePrice)
+            {
+                MessageBox.Show("Commission must be lower than Base Price");
                 return;
             }
             if (!DateTime.TryParse(mtxtStart.Text, out start))
@@ -74,6 +85,7 @@ namespace Travel
                 MessageBox.Show("End date must be later than start date");
                 return;
             }
+
             if (add)
             {
                 Package newPkg = new Package();
