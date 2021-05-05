@@ -29,6 +29,8 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEditPackage = new System.Windows.Forms.Button();
             this.btnAddPackage = new System.Windows.Forms.Button();
@@ -108,6 +110,7 @@ namespace Travel
             this.PkgName.DataPropertyName = "PkgName";
             this.PkgName.HeaderText = "Name";
             this.PkgName.Name = "PkgName";
+            this.PkgName.ReadOnly = true;
             this.PkgName.Width = 160;
             // 
             // PkgStartDate
@@ -115,31 +118,42 @@ namespace Travel
             this.PkgStartDate.DataPropertyName = "PkgStartDate";
             this.PkgStartDate.HeaderText = "Start Date";
             this.PkgStartDate.Name = "PkgStartDate";
+            this.PkgStartDate.ReadOnly = true;
             // 
             // PkgEndDate
             // 
             this.PkgEndDate.DataPropertyName = "PkgEndDate";
             this.PkgEndDate.HeaderText = "End Date";
             this.PkgEndDate.Name = "PkgEndDate";
+            this.PkgEndDate.ReadOnly = true;
             // 
             // PkgDesc
             // 
             this.PkgDesc.DataPropertyName = "PkgDesc";
             this.PkgDesc.HeaderText = "Description";
             this.PkgDesc.Name = "PkgDesc";
+            this.PkgDesc.ReadOnly = true;
             this.PkgDesc.Width = 240;
             // 
             // PkgBasePrice
             // 
             this.PkgBasePrice.DataPropertyName = "PkgBasePrice";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.PkgBasePrice.DefaultCellStyle = dataGridViewCellStyle1;
             this.PkgBasePrice.HeaderText = "Base Price";
             this.PkgBasePrice.Name = "PkgBasePrice";
+            this.PkgBasePrice.ReadOnly = true;
             // 
             // PkgAgencyCommission
             // 
             this.PkgAgencyCommission.DataPropertyName = "PkgAgencyCommission";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.PkgAgencyCommission.DefaultCellStyle = dataGridViewCellStyle2;
             this.PkgAgencyCommission.HeaderText = "Commission";
             this.PkgAgencyCommission.Name = "PkgAgencyCommission";
+            this.PkgAgencyCommission.ReadOnly = true;
             this.PkgAgencyCommission.Width = 80;
             // 
             // frmPackageList

@@ -100,7 +100,6 @@ namespace Travel
                      ex.GetType().ToString());
                 return;
             }
-
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
