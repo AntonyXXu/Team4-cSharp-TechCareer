@@ -42,6 +42,7 @@ namespace Travel
             this.PkgDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PkgBasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PkgAgencyCommission = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddProducts = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVPackages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@ namespace Travel
             // 
             // btnEditPackage
             // 
-            this.btnEditPackage.Location = new System.Drawing.Point(298, 342);
+            this.btnEditPackage.Location = new System.Drawing.Point(227, 342);
             this.btnEditPackage.Name = "btnEditPackage";
             this.btnEditPackage.Size = new System.Drawing.Size(166, 57);
             this.btnEditPackage.TabIndex = 4;
@@ -156,12 +157,23 @@ namespace Travel
             this.PkgAgencyCommission.ReadOnly = true;
             this.PkgAgencyCommission.Width = 80;
             // 
+            // btnAddProducts
+            // 
+            this.btnAddProducts.Location = new System.Drawing.Point(425, 342);
+            this.btnAddProducts.Name = "btnAddProducts";
+            this.btnAddProducts.Size = new System.Drawing.Size(166, 57);
+            this.btnAddProducts.TabIndex = 4;
+            this.btnAddProducts.Text = "Add/Edit Package Products";
+            this.btnAddProducts.UseVisualStyleBackColor = true;
+            this.btnAddProducts.Click += new System.EventHandler(this.btnEditPackage_Click);
+            // 
             // frmPackageList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 450);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnAddProducts);
             this.Controls.Add(this.btnEditPackage);
             this.Controls.Add(this.btnAddPackage);
             this.Controls.Add(this.dataGVPackages);
@@ -186,5 +198,6 @@ namespace Travel
         private System.Windows.Forms.DataGridViewTextBoxColumn PkgDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn PkgBasePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn PkgAgencyCommission;
+        private System.Windows.Forms.Button btnAddProducts;
     }
 }
