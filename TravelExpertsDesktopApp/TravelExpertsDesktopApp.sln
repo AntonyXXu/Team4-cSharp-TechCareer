@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBModels", "DBModels\DBModels.csproj", "{1A00A949-3AC9-46AE-B7CF-227D643A8E94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBModels", "DBModels\DBModels.csproj", "{1A00A949-3AC9-46AE-B7CF-227D643A8E94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Travel", "Travel\Travel.csproj", "{5B8171F1-84B4-4A1A-AED5-CE17EC089550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Travel", "Travel\Travel.csproj", "{5B8171F1-84B4-4A1A-AED5-CE17EC089550}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
