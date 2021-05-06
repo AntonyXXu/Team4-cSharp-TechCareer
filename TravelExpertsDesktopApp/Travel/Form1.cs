@@ -26,9 +26,6 @@ namespace Travel
                 ConfigurationManager.ConnectionStrings["TravelExperts"].ConnectionString;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            return;
-        }
+
     }
 }
