@@ -32,15 +32,18 @@ namespace Travel
             this.lblProductName = new System.Windows.Forms.Label();
             this.lblPackageNameVal = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGVPackageSuppProdList = new System.Windows.Forms.DataGridView();
+            this.pkgSupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboProduct = new System.Windows.Forms.ComboBox();
             this.lblPackageName = new System.Windows.Forms.Label();
             this.lblSupplierName = new System.Windows.Forms.Label();
-            this.comboSupplier = new System.Windows.Forms.ComboBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.colSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnDeleteSelected = new System.Windows.Forms.Button();
+            this.dataGVSuppliers = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVPackageSuppProdList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVSuppliers)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProductName
@@ -70,19 +73,44 @@ namespace Travel
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // dataGridView1
+            // dataGVPackageSuppProdList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGVPackageSuppProdList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVPackageSuppProdList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pkgSupID,
             this.colSupplier,
             this.colProduct});
-            this.dataGridView1.Location = new System.Drawing.Point(26, 62);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(343, 388);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGVPackageSuppProdList.Location = new System.Drawing.Point(26, 62);
+            this.dataGVPackageSuppProdList.MultiSelect = false;
+            this.dataGVPackageSuppProdList.Name = "dataGVPackageSuppProdList";
+            this.dataGVPackageSuppProdList.RowTemplate.Height = 25;
+            this.dataGVPackageSuppProdList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGVPackageSuppProdList.Size = new System.Drawing.Size(393, 388);
+            this.dataGVPackageSuppProdList.TabIndex = 3;
+            // 
+            // pkgSupID
+            // 
+            this.pkgSupID.DataPropertyName = "psID";
+            this.pkgSupID.HeaderText = "ID";
+            this.pkgSupID.Name = "pkgSupID";
+            this.pkgSupID.ReadOnly = true;
+            this.pkgSupID.Width = 50;
+            // 
+            // colSupplier
+            // 
+            this.colSupplier.DataPropertyName = "sName";
+            this.colSupplier.HeaderText = "Supplier";
+            this.colSupplier.Name = "colSupplier";
+            this.colSupplier.ReadOnly = true;
+            this.colSupplier.Width = 150;
+            // 
+            // colProduct
+            // 
+            this.colProduct.DataPropertyName = "pName";
+            this.colProduct.HeaderText = "Product";
+            this.colProduct.Name = "colProduct";
+            this.colProduct.ReadOnly = true;
+            this.colProduct.Width = 150;
             // 
             // comboProduct
             // 
@@ -111,48 +139,44 @@ namespace Travel
             this.lblSupplierName.TabIndex = 0;
             this.lblSupplierName.Text = "Supplier";
             // 
-            // comboSupplier
-            // 
-            this.comboSupplier.FormattingEnabled = true;
-            this.comboSupplier.Location = new System.Drawing.Point(440, 169);
-            this.comboSupplier.Name = "comboSupplier";
-            this.comboSupplier.Size = new System.Drawing.Size(259, 23);
-            this.comboSupplier.TabIndex = 4;
-            // 
             // btnAddProduct
             // 
             this.btnAddProduct.Location = new System.Drawing.Point(440, 401);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(95, 49);
+            this.btnAddProduct.Size = new System.Drawing.Size(64, 49);
             this.btnAddProduct.TabIndex = 2;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // colSupplier
+            // btnDeleteSelected
             // 
-            this.colSupplier.DataPropertyName = "sName";
-            this.colSupplier.HeaderText = "Supplier";
-            this.colSupplier.Name = "colSupplier";
-            this.colSupplier.ReadOnly = true;
-            this.colSupplier.Width = 150;
+            this.btnDeleteSelected.Location = new System.Drawing.Point(523, 401);
+            this.btnDeleteSelected.Name = "btnDeleteSelected";
+            this.btnDeleteSelected.Size = new System.Drawing.Size(64, 49);
+            this.btnDeleteSelected.TabIndex = 2;
+            this.btnDeleteSelected.Text = "Delete";
+            this.btnDeleteSelected.UseVisualStyleBackColor = true;
+            this.btnDeleteSelected.Click += new System.EventHandler(this.btnDeleteSelected_Click);
             // 
-            // colProduct
+            // dataGVSuppliers
             // 
-            this.colProduct.DataPropertyName = "pName";
-            this.colProduct.HeaderText = "Product";
-            this.colProduct.Name = "colProduct";
-            this.colProduct.ReadOnly = true;
-            this.colProduct.Width = 150;
+            this.dataGVSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVSuppliers.Location = new System.Drawing.Point(440, 170);
+            this.dataGVSuppliers.Name = "dataGVSuppliers";
+            this.dataGVSuppliers.RowTemplate.Height = 25;
+            this.dataGVSuppliers.Size = new System.Drawing.Size(259, 202);
+            this.dataGVSuppliers.TabIndex = 5;
             // 
             // formEditPackageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 491);
-            this.Controls.Add(this.comboSupplier);
+            this.ClientSize = new System.Drawing.Size(741, 491);
+            this.Controls.Add(this.dataGVSuppliers);
             this.Controls.Add(this.comboProduct);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGVPackageSuppProdList);
+            this.Controls.Add(this.btnDeleteSelected);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblPackageNameVal);
@@ -162,7 +186,8 @@ namespace Travel
             this.Name = "formEditPackageProducts";
             this.Text = "Add Products to the selected package";
             this.Load += new System.EventHandler(this.formEditPackageProducts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVPackageSuppProdList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVSuppliers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,13 +198,15 @@ namespace Travel
         private System.Windows.Forms.Label lblProductName;
         private System.Windows.Forms.Label lblPackageNameVal;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGVPackageSuppProdList;
         private System.Windows.Forms.ComboBox comboProduct;
         private System.Windows.Forms.Label lblPackageName;
         private System.Windows.Forms.Label lblSupplierName;
-        private System.Windows.Forms.ComboBox comboSupplier;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnDeleteSelected;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkgSupID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSupplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProduct;
+        private System.Windows.Forms.DataGridView dataGVSuppliers;
     }
 }

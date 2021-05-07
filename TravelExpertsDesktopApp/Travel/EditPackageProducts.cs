@@ -42,9 +42,9 @@ namespace Travel
                     ).ToList();
 
             var packageProdSupp = (from prodSupplier in prodSuppliers
-                                   join product in context.Products.ToList()
-                                      on prodSupplier.ProductId equals product.ProductId
-                                   join supplier in context.Suppliers.ToList()
+                                   join product in context.Products
+                                       on prodSupplier.ProductId equals product.ProductId
+                                   join supplier in context.Suppliers
                                        on prodSupplier.SupplierId equals supplier.SupplierId
                                    select new
                                    {
@@ -53,7 +53,15 @@ namespace Travel
                                        psID = prodSupplier.ProductSupplierId
                                    }).ToList();
 
-            dataGridView1.DataSource = packageProdSupp;
+            dataGVPackageSuppProdList.DataSource = packageProdSupp;
+            try
+            {
+                dataGVPackageSuppProdList.Rows[0].Selected = true;
+            }
+            catch
+            {
+                btnDeleteSelected.Enabled = false;
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -63,9 +71,42 @@ namespace Travel
 
         private void comboProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboSupplier.DataSource = context.ProductsSuppliers
-                .Where(supp => supp.ProductId == Convert.ToInt32(comboProduct.ValueMember));
+            var text = comboProduct.SelectedItem;
+            int prodID = Convert.ToInt32(comboProduct.SelectedItem);
+            Product currProd = context.Products.Find(prodID);
 
+            List<int> productSupplierID = currProd.ProductsSuppliers
+               .Select(product => product.ProductSupplierId).ToList();
+
+            var supplierData = (from prodSupplier in productSupplierID
+                                join supplier in context.Suppliers
+                                    on prodSupplier equals supplier.SupplierId
+                                select new
+                                {
+                                    sName = supplier.SupName,
+                                    psID = prodSupplier
+                                }).ToList();
+
+            dataGVSuppliers.DataSource = supplierData;
+        }
+
+        private void btnDeleteSelected_Click(object sender, EventArgs e)
+        {
+            PackagesProductsSupplier del = getSelected();
+            context.PackagesProductsSuppliers.Remove(del);
+            context.SaveChanges();
+            display();
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+
+            display();
+        }
+        private PackagesProductsSupplier getSelected()
+        {
+            int selection = Convert.ToInt32(dataGVPackageSuppProdList.CurrentRow.Cells[2].FormattedValue);
+            return context.PackagesProductsSuppliers.Find(current.PackageId, selection);
         }
     }
 }
