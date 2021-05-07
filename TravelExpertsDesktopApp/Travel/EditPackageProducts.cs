@@ -42,15 +42,18 @@ namespace Travel
                     ).ToList();
 
             var packageProdSupp = (from prodSupplier in prodSuppliers
-                                        join product in context.Products.ToList()
-                                           on prodSupplier.ProductId equals product.ProductId
-                                        join supplier in context.Suppliers.ToList()
-                                            on prodSupplier.SupplierId equals supplier.SupplierId
-                                        select new { pName = product.ProdName, 
-                                                sName = supplier.SupName,
-                                                psID = prodSupplier.ProductSupplierId}).ToList();
+                                   join product in context.Products.ToList()
+                                      on prodSupplier.ProductId equals product.ProductId
+                                   join supplier in context.Suppliers.ToList()
+                                       on prodSupplier.SupplierId equals supplier.SupplierId
+                                   select new
+                                   {
+                                       pName = product.ProdName,
+                                       sName = supplier.SupName,
+                                       psID = prodSupplier.ProductSupplierId
+                                   }).ToList();
 
-            dataGridView1.DataSource = packageProdSupp;                     
+            dataGridView1.DataSource = packageProdSupp;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

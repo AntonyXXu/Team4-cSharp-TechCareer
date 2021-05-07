@@ -131,6 +131,7 @@ namespace Travel
             // 
             // colSupplier
             // 
+            this.colSupplier.DataPropertyName = "sName";
             this.colSupplier.HeaderText = "Supplier";
             this.colSupplier.Name = "colSupplier";
             this.colSupplier.ReadOnly = true;
@@ -138,7 +139,7 @@ namespace Travel
             // 
             // colProduct
             // 
-            this.colProduct.DataPropertyName = "ProdName";
+            this.colProduct.DataPropertyName = "pName";
             this.colProduct.HeaderText = "Product";
             this.colProduct.Name = "colProduct";
             this.colProduct.ReadOnly = true;
