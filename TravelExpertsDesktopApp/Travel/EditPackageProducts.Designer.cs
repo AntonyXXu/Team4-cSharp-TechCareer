@@ -33,13 +33,13 @@ namespace Travel
             this.lblPackageNameVal = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboProduct = new System.Windows.Forms.ComboBox();
             this.lblPackageName = new System.Windows.Forms.Label();
             this.lblSupplierName = new System.Windows.Forms.Label();
             this.comboSupplier = new System.Windows.Forms.ComboBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.colSupplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,20 +83,6 @@ namespace Travel
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(343, 388);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // colSupplier
-            // 
-            this.colSupplier.HeaderText = "Supplier";
-            this.colSupplier.Name = "colSupplier";
-            this.colSupplier.ReadOnly = true;
-            this.colSupplier.Width = 150;
-            // 
-            // colProduct
-            // 
-            this.colProduct.HeaderText = "Product";
-            this.colProduct.Name = "colProduct";
-            this.colProduct.ReadOnly = true;
-            this.colProduct.Width = 150;
             // 
             // comboProduct
             // 
@@ -143,6 +129,21 @@ namespace Travel
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // colSupplier
+            // 
+            this.colSupplier.HeaderText = "Supplier";
+            this.colSupplier.Name = "colSupplier";
+            this.colSupplier.ReadOnly = true;
+            this.colSupplier.Width = 150;
+            // 
+            // colProduct
+            // 
+            this.colProduct.DataPropertyName = "ProdName";
+            this.colProduct.HeaderText = "Product";
+            this.colProduct.Name = "colProduct";
+            this.colProduct.ReadOnly = true;
+            this.colProduct.Width = 150;
+            // 
             // formEditPackageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -172,12 +173,12 @@ namespace Travel
         private System.Windows.Forms.Label lblPackageNameVal;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSupplier;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colProduct;
         private System.Windows.Forms.ComboBox comboProduct;
         private System.Windows.Forms.Label lblPackageName;
         private System.Windows.Forms.Label lblSupplierName;
         private System.Windows.Forms.ComboBox comboSupplier;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSupplier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colProduct;
     }
 }
