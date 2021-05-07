@@ -71,9 +71,9 @@ namespace Travel
 
         private void comboProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var text = comboProduct.SelectedItem;
-            int prodID = Convert.ToInt32(comboProduct.SelectedItem);
-            Product currProd = context.Products.Find(prodID);
+            var prod = comboProduct.SelectedValue;
+
+            Product currProd = context.Products.Find(prod);
 
             List<int> productSupplierID = currProd.ProductsSuppliers
                .Select(product => product.ProductSupplierId).ToList();
