@@ -1,5 +1,5 @@
 ﻿
-namespace Suppliers
+namespace Travel
 {
     partial class SuppliersInfo
     {
@@ -30,11 +30,11 @@ namespace Suppliers
         private void InitializeComponent()
         {
             this.supplierGrid = new System.Windows.Forms.DataGridView();
+            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addBtn = new System.Windows.Forms.Button();
             this.modifyBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.supplierGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,33 +49,6 @@ namespace Suppliers
             this.supplierGrid.RowHeadersWidth = 51;
             this.supplierGrid.Size = new System.Drawing.Size(580, 336);
             this.supplierGrid.TabIndex = 0;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(33, 448);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(94, 29);
-            this.addBtn.TabIndex = 1;
-            this.addBtn.Text = "&Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            // 
-            // modifyBtn
-            // 
-            this.modifyBtn.Location = new System.Drawing.Point(164, 448);
-            this.modifyBtn.Name = "modifyBtn";
-            this.modifyBtn.Size = new System.Drawing.Size(94, 29);
-            this.modifyBtn.TabIndex = 2;
-            this.modifyBtn.Text = "&Modify";
-            this.modifyBtn.UseVisualStyleBackColor = true;
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Location = new System.Drawing.Point(519, 448);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(94, 29);
-            this.cancelBtn.TabIndex = 4;
-            this.cancelBtn.Text = "&Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
             // 
             // supplierID
             // 
@@ -93,6 +66,35 @@ namespace Suppliers
             this.supplierName.MinimumWidth = 6;
             this.supplierName.Name = "supplierName";
             this.supplierName.Width = 125;
+            // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(33, 448);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(94, 29);
+            this.addBtn.TabIndex = 1;
+            this.addBtn.Text = "&Add";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // modifyBtn
+            // 
+            this.modifyBtn.Location = new System.Drawing.Point(164, 448);
+            this.modifyBtn.Name = "modifyBtn";
+            this.modifyBtn.Size = new System.Drawing.Size(94, 29);
+            this.modifyBtn.TabIndex = 2;
+            this.modifyBtn.Text = "&Modify";
+            this.modifyBtn.UseVisualStyleBackColor = true;
+            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(519, 448);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(94, 29);
+            this.cancelBtn.TabIndex = 4;
+            this.cancelBtn.Text = "&Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
             // 
             // SuppliersInfo
             // 
