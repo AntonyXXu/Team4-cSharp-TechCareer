@@ -25,9 +25,9 @@ namespace Travel
         private void formEditPackageProducts_Load(object sender, EventArgs e)
         {
             lblPackageNameVal.Text = current.PkgName;
-            comboProduct.DataSource = context.Products.ToList();
             comboProduct.DisplayMember = "ProdName";
             comboProduct.ValueMember = "ProductID";
+            comboProduct.DataSource = context.Products.ToList();
             display();
         }
 
@@ -71,6 +71,8 @@ namespace Travel
 
         private void comboProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
             var prod = comboProduct.SelectedValue;
 
             Product currProd = context.Products.Find(prod);
@@ -78,14 +80,15 @@ namespace Travel
             List<int> productSupplierID = currProd.ProductsSuppliers
                .Select(product => product.ProductSupplierId).ToList();
 
-            var supplierData = (from prodSupplier in productSupplierID
+            var supplierData = (from ProductsSupplier in currProd.ProductsSuppliers
                                 join supplier in context.Suppliers
-                                    on prodSupplier equals supplier.SupplierId
+                                    on ProductsSupplier.SupplierId equals supplier.SupplierId
                                 select new
                                 {
                                     sName = supplier.SupName,
-                                    psID = prodSupplier
+                                    psID = ProductsSupplier.ProductSupplierId
                                 }).ToList();
+
 
             dataGVSuppliers.DataSource = supplierData;
         }
