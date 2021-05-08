@@ -170,6 +170,7 @@ namespace Travel
             this.dataGVSuppliers.Location = new System.Drawing.Point(440, 141);
             this.dataGVSuppliers.Name = "dataGVSuppliers";
             this.dataGVSuppliers.RowTemplate.Height = 25;
+            this.dataGVSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGVSuppliers.Size = new System.Drawing.Size(400, 238);
             this.dataGVSuppliers.TabIndex = 5;
             // 
@@ -183,7 +184,7 @@ namespace Travel
             // 
             // SupplierName
             // 
-            this.SupplierName.DataPropertyName = "SupName";
+            this.SupplierName.DataPropertyName = "sName";
             this.SupplierName.HeaderText = "Supplier";
             this.SupplierName.Name = "SupplierName";
             this.SupplierName.ReadOnly = true;

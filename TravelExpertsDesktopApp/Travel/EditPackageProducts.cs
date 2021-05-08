@@ -71,8 +71,6 @@ namespace Travel
 
         private void comboProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             var prod = comboProduct.SelectedValue;
 
             Product currProd = context.Products.Find(prod);
@@ -88,9 +86,15 @@ namespace Travel
                                     sName = supplier.SupName,
                                     psID = ProductsSupplier.ProductSupplierId
                                 }).ToList();
-
-
             dataGVSuppliers.DataSource = supplierData;
+            try
+            {
+                dataGVSuppliers.Rows[0].Selected = true;
+            }
+            catch
+            {
+                btnAddProduct.Enabled = false;
+            }
         }
 
         private void btnDeleteSelected_Click(object sender, EventArgs e)
@@ -103,13 +107,35 @@ namespace Travel
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            int selection = Convert.ToInt32(dataGVSuppliers.CurrentRow.Cells[1].FormattedValue);
+            PackagesProductsSupplier add = new PackagesProductsSupplier();
+            add.PackageId = current.PackageId;
+            add.ProductSupplierId = selection;
+            try
+            {
+                if (context.PackagesProductsSuppliers.Contains(add))
+                {
+                    MessageBox.Show("This product already exists within this package");
+                    return;
+                }
+                
+                context.PackagesProductsSuppliers.Add(add);
+                context.SaveChanges();
+                display();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during update: " + ex.Message,
+                   ex.GetType().ToString());
+                return;
+            }
 
-            display();
         }
         private PackagesProductsSupplier getSelected()
         {
             int selection = Convert.ToInt32(dataGVPackageSuppProdList.CurrentRow.Cells[2].FormattedValue);
             return context.PackagesProductsSuppliers.Find(current.PackageId, selection);
         }
+
     }
 }
