@@ -24,5 +24,6 @@ namespace DBModels.Models
 
         [InverseProperty(nameof(ProductsSupplier.Product))]
         public virtual ICollection<ProductsSupplier> ProductsSuppliers { get; set; }
+
     }
 }
