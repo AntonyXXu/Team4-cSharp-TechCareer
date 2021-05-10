@@ -17,6 +17,7 @@ namespace DBModels.Models
         }
 
         [Key]
+        
         public int ProductId { get; set; }
         [Required]
         [StringLength(50)]
