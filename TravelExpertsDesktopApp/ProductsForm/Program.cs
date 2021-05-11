@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Travel
+namespace ProductsForm
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace Travel
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductsFrm());
+            Application.Run(new ProductFrm());
         }
     }
 }
