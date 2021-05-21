@@ -18,13 +18,14 @@ namespace Travel
 {
     public partial class ProductsFrm : Form
     {
-        public ProductsFrm()
+        public ProductsFrm(TravelExpertsContext ctx)
         {
             InitializeComponent();
+            context = ctx;
         }
 
-        private TravelExpertsContext context = new TravelExpertsContext();
         public Product selectedProduct;
+        private TravelExpertsContext context;
 
         private void ProductsFrm_Load(object sender, EventArgs e)
         {

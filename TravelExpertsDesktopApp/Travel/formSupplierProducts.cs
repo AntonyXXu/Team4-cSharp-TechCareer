@@ -24,6 +24,21 @@ namespace Travel
             context = ctx;
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            ProductsFrm newForm = new ProductsFrm(context);
+            newForm.ShowDialog();
+        }
+
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            SuppliersFrm newForm = new SuppliersFrm(context);
+            newForm.ShowDialog();
+        }
     }
 }

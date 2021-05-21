@@ -1,7 +1,7 @@
 ﻿
 namespace Travel
 {
-    partial class SuppliersInfo
+    partial class SuppliersFrm
     {
         /// <summary>
         ///  Required designer variable.
@@ -100,7 +100,7 @@ namespace Travel
             this.supplierName.Name = "supplierName";
             this.supplierName.Width = 450;
             // 
-            // SuppliersInfo
+            // SuppliersFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@ namespace Travel
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.supplierGrid);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "SuppliersInfo";
+            this.Name = "SuppliersFrm";
             this.Text = "Suppliers Info";
             this.Load += new System.EventHandler(this.Suppliers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.supplierGrid)).EndInit();

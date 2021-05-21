@@ -11,15 +11,14 @@ using DBModels.Models;
 
 namespace Travel
 {
-    public partial class SuppliersInfo : Form
+    public partial class SuppliersFrm : Form
     {
-
-        public TravelExpertsContext context { get; set; }
-        public Supplier supplier { get; set; }
-        public SuppliersInfo()
+        private TravelExpertsContext context { get; set; }
+        private Supplier supplier { get; set; }
+        public SuppliersFrm(TravelExpertsContext ctx)
         {
             InitializeComponent();
-            context = new TravelExpertsContext();
+            context = ctx;
         }
         private Supplier getSelected()
         {
