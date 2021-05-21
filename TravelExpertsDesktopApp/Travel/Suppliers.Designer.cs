@@ -30,11 +30,11 @@ namespace Travel
         private void InitializeComponent()
         {
             this.supplierGrid = new System.Windows.Forms.DataGridView();
-            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addBtn = new System.Windows.Forms.Button();
             this.modifyBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.supplierGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +44,44 @@ namespace Travel
             this.supplierGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.supplierID,
             this.supplierName});
-            this.supplierGrid.Location = new System.Drawing.Point(33, 46);
+            this.supplierGrid.Location = new System.Drawing.Point(29, 34);
+            this.supplierGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.supplierGrid.Name = "supplierGrid";
             this.supplierGrid.RowHeadersWidth = 51;
-            this.supplierGrid.Size = new System.Drawing.Size(580, 336);
+            this.supplierGrid.Size = new System.Drawing.Size(508, 252);
             this.supplierGrid.TabIndex = 0;
+            // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(29, 336);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(82, 22);
+            this.addBtn.TabIndex = 1;
+            this.addBtn.Text = "&Add";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // modifyBtn
+            // 
+            this.modifyBtn.Location = new System.Drawing.Point(144, 336);
+            this.modifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.modifyBtn.Name = "modifyBtn";
+            this.modifyBtn.Size = new System.Drawing.Size(82, 22);
+            this.modifyBtn.TabIndex = 2;
+            this.modifyBtn.Text = "&Modify";
+            this.modifyBtn.UseVisualStyleBackColor = true;
+            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(454, 336);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(82, 22);
+            this.cancelBtn.TabIndex = 4;
+            this.cancelBtn.Text = "&Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
             // 
             // supplierID
             // 
@@ -57,7 +90,7 @@ namespace Travel
             this.supplierID.MinimumWidth = 6;
             this.supplierID.Name = "supplierID";
             this.supplierID.ReadOnly = true;
-            this.supplierID.Width = 125;
+            this.supplierID.Width = 200;
             // 
             // supplierName
             // 
@@ -65,46 +98,18 @@ namespace Travel
             this.supplierName.HeaderText = "Supplier Name";
             this.supplierName.MinimumWidth = 6;
             this.supplierName.Name = "supplierName";
-            this.supplierName.Width = 125;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(33, 448);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(94, 29);
-            this.addBtn.TabIndex = 1;
-            this.addBtn.Text = "&Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // modifyBtn
-            // 
-            this.modifyBtn.Location = new System.Drawing.Point(164, 448);
-            this.modifyBtn.Name = "modifyBtn";
-            this.modifyBtn.Size = new System.Drawing.Size(94, 29);
-            this.modifyBtn.TabIndex = 2;
-            this.modifyBtn.Text = "&Modify";
-            this.modifyBtn.UseVisualStyleBackColor = true;
-            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Location = new System.Drawing.Point(519, 448);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(94, 29);
-            this.cancelBtn.TabIndex = 4;
-            this.cancelBtn.Text = "&Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.supplierName.Width = 250;
             // 
             // SuppliersInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 639);
+            this.ClientSize = new System.Drawing.Size(592, 390);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.supplierGrid);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SuppliersInfo";
             this.Text = "Suppliers Info";
             this.Load += new System.EventHandler(this.Suppliers_Load);
