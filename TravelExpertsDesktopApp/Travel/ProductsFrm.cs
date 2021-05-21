@@ -35,10 +35,7 @@ namespace Travel
         }
         private void DisplayProducts()
         {
-            //productDGrid.AutoGenerateColumns = false;
-            //productDGrid.DataSource = context.Products.ToList();
-
-            productDGrid.Columns.Clear();
+                        productDGrid.Columns.Clear();
             var products = context.Products.OrderBy(pr => pr.ProductId)
                 .Select(pr => new { pr.ProductId, pr.ProdName }).ToList();
 
