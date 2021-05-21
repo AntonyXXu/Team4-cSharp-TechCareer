@@ -104,6 +104,7 @@ namespace Travel
             this.Controls.Add(this.lblProductName);
             this.Name = "EditProductSupplier";
             this.Text = "Edit Product Suppliers";
+            this.Load += new System.EventHandler(this.EditProductSupplier_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

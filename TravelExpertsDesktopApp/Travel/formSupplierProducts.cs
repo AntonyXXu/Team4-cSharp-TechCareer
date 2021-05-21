@@ -80,12 +80,20 @@ namespace Travel
         private void btnAddProducts_Click(object sender, EventArgs e)
         {
             EditProductSupplier newForm = new EditProductSupplier(true, null, context);
+            newForm.ShowDialog();
         }
 
         private void btnEditProdSupp_Click(object sender, EventArgs e)
         {
             ProductsSupplier current = getSelected();
             EditProductSupplier newForm = new EditProductSupplier(false, current, context);
+            newForm.ShowDialog();
+        }
+
+        private ProductsSupplier getSelected()
+        {
+            int selection = Convert.ToInt32(dataGVProdSupp.CurrentRow.Cells[0].FormattedValue);
+            return context.ProductsSuppliers.Find(selection);
         }
     }
 }
