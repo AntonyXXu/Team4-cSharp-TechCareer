@@ -40,5 +40,10 @@ namespace Travel
             SuppliersFrm newForm = new SuppliersFrm(context);
             newForm.ShowDialog();
         }
+
+        private void formSupplierProducts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
