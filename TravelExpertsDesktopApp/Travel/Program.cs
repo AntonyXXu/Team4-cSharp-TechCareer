@@ -17,7 +17,7 @@ namespace Travel
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SuppliersInfo());
+            Application.Run(new frmPackageList());
         }
     }
 }

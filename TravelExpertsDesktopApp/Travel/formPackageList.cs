@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using DBModels.Models;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Travel
 {
@@ -18,6 +19,8 @@ namespace Travel
         {
             InitializeComponent();
             context = new TravelExpertsContext();
+            TravelExpertsContext.connectString =
+                ConfigurationManager.ConnectionStrings["TravelExperts"].ConnectionString;
         }
 
         private Package getSelected()
@@ -75,6 +78,12 @@ namespace Travel
         {
             Package current = getSelected();
             formEditPackageProducts newForm = new formEditPackageProducts(current, context);
+            newForm.ShowDialog();
+        }
+
+        private void btnProdSuppliers_Click(object sender, EventArgs e)
+        {
+            formSupplierProducts newForm = new formSupplierProducts(context);
             newForm.ShowDialog();
         }
     }

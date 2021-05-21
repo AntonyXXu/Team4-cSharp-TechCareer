@@ -1,7 +1,7 @@
 ﻿
 namespace Travel
 {
-    partial class formSupplierPackages
+    partial class formSupplierProducts
     {
         /// <summary>
         ///  Required designer variable.

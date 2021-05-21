@@ -13,17 +13,15 @@ using System.Configuration;
 
 namespace Travel
 {
-    public partial class formSupplierPackages : Form
+    public partial class formSupplierProducts : Form
     {
 
         TravelExpertsContext context;
 
-        public formSupplierPackages()
+        public formSupplierProducts(TravelExpertsContext ctx)
         {
             InitializeComponent();
-            context = new TravelExpertsContext();
-            TravelExpertsContext.connectString =
-                ConfigurationManager.ConnectionStrings["TravelExperts"].ConnectionString;
+            context = ctx;
         }
 
 

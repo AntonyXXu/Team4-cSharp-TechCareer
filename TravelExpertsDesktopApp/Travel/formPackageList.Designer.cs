@@ -29,8 +29,8 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEditPackage = new System.Windows.Forms.Button();
             this.btnAddPackage = new System.Windows.Forms.Button();
@@ -43,6 +43,7 @@ namespace Travel
             this.PkgBasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PkgAgencyCommission = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddProducts = new System.Windows.Forms.Button();
+            this.btnProdSuppliers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVPackages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +59,9 @@ namespace Travel
             // 
             // btnEditPackage
             // 
-            this.btnEditPackage.Location = new System.Drawing.Point(227, 342);
+            this.btnEditPackage.Location = new System.Drawing.Point(140, 342);
             this.btnEditPackage.Name = "btnEditPackage";
-            this.btnEditPackage.Size = new System.Drawing.Size(166, 57);
+            this.btnEditPackage.Size = new System.Drawing.Size(98, 57);
             this.btnEditPackage.TabIndex = 4;
             this.btnEditPackage.Text = "Edit Package";
             this.btnEditPackage.UseVisualStyleBackColor = true;
@@ -70,7 +71,7 @@ namespace Travel
             // 
             this.btnAddPackage.Location = new System.Drawing.Point(30, 342);
             this.btnAddPackage.Name = "btnAddPackage";
-            this.btnAddPackage.Size = new System.Drawing.Size(166, 57);
+            this.btnAddPackage.Size = new System.Drawing.Size(86, 57);
             this.btnAddPackage.TabIndex = 5;
             this.btnAddPackage.Text = "Add New Package";
             this.btnAddPackage.UseVisualStyleBackColor = true;
@@ -139,9 +140,9 @@ namespace Travel
             // PkgBasePrice
             // 
             this.PkgBasePrice.DataPropertyName = "PkgBasePrice";
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.PkgBasePrice.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.PkgBasePrice.DefaultCellStyle = dataGridViewCellStyle3;
             this.PkgBasePrice.HeaderText = "Base Price";
             this.PkgBasePrice.Name = "PkgBasePrice";
             this.PkgBasePrice.ReadOnly = true;
@@ -149,9 +150,9 @@ namespace Travel
             // PkgAgencyCommission
             // 
             this.PkgAgencyCommission.DataPropertyName = "PkgAgencyCommission";
-            dataGridViewCellStyle8.Format = "C2";
-            dataGridViewCellStyle8.NullValue = null;
-            this.PkgAgencyCommission.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.PkgAgencyCommission.DefaultCellStyle = dataGridViewCellStyle4;
             this.PkgAgencyCommission.HeaderText = "Commission";
             this.PkgAgencyCommission.Name = "PkgAgencyCommission";
             this.PkgAgencyCommission.ReadOnly = true;
@@ -159,13 +160,23 @@ namespace Travel
             // 
             // btnAddProducts
             // 
-            this.btnAddProducts.Location = new System.Drawing.Point(425, 342);
+            this.btnAddProducts.Location = new System.Drawing.Point(288, 342);
             this.btnAddProducts.Name = "btnAddProducts";
-            this.btnAddProducts.Size = new System.Drawing.Size(166, 57);
+            this.btnAddProducts.Size = new System.Drawing.Size(113, 57);
             this.btnAddProducts.TabIndex = 4;
             this.btnAddProducts.Text = "View/Edit Package Products";
             this.btnAddProducts.UseVisualStyleBackColor = true;
             this.btnAddProducts.Click += new System.EventHandler(this.btnAddProducts_Click);
+            // 
+            // btnProdSuppliers
+            // 
+            this.btnProdSuppliers.Location = new System.Drawing.Point(437, 342);
+            this.btnProdSuppliers.Name = "btnProdSuppliers";
+            this.btnProdSuppliers.Size = new System.Drawing.Size(122, 57);
+            this.btnProdSuppliers.TabIndex = 4;
+            this.btnProdSuppliers.Text = "View/Edit Products and Suppliers";
+            this.btnProdSuppliers.UseVisualStyleBackColor = true;
+            this.btnProdSuppliers.Click += new System.EventHandler(this.btnProdSuppliers_Click);
             // 
             // frmPackageList
             // 
@@ -173,6 +184,7 @@ namespace Travel
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 450);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnProdSuppliers);
             this.Controls.Add(this.btnAddProducts);
             this.Controls.Add(this.btnEditPackage);
             this.Controls.Add(this.btnAddPackage);
@@ -199,5 +211,6 @@ namespace Travel
         private System.Windows.Forms.DataGridViewTextBoxColumn PkgBasePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn PkgAgencyCommission;
         private System.Windows.Forms.Button btnAddProducts;
+        private System.Windows.Forms.Button btnProdSuppliers;
     }
 }
