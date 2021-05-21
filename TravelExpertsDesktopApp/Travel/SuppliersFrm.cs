@@ -42,35 +42,17 @@ namespace Travel
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            formAddSuppliers newForm = new formAddSuppliers(true, null, context);
+            formAddSupplier newForm = new formAddSupplier(true, null, context) ;
             newForm.ShowDialog();
             supplierGridView();
-
-            //newContact = new SupplierContact();
-            //SuppliersAddNew addNewContact = new SuppliersAddNew()
-            //{
-            //    newContact = newContact
-            //};
-            //var r = addNewContact.ShowDialog();
-            //if (r == DialogResult.OK)
-            //{
-            //    newContact = addNewContact.newContact;
-            //    context.SupplierContacts.Add(newContact);
-            //    context.SaveChanges();
-            //    supplierGridView();
-            //}
         }
 
         private void modifyBtn_Click(object sender, EventArgs e)
         {
-            //Supplier current = getSelected();
-            //formAddSuppliers newForm = new formAddSuppliers(false, current, context);
-
-            //DialogResult result = newForm.ShowDialog();
-            //if (result == DialogResult.OK)
-            //{
-            //    supplierGridView();
-            //}
+            Supplier current = getSelected();
+            formAddSupplier newForm = new formAddSupplier(false, current, context);
+            newForm.ShowDialog();
+            supplierGridView();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)

@@ -82,6 +82,7 @@ namespace Travel
             // SupplierNametxt
             // 
             this.SupplierNametxt.Location = new System.Drawing.Point(108, 89);
+            this.SupplierNametxt.MaxLength = 255;
             this.SupplierNametxt.Name = "SupplierNametxt";
             this.SupplierNametxt.Size = new System.Drawing.Size(221, 23);
             this.SupplierNametxt.TabIndex = 7;
