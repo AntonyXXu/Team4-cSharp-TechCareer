@@ -30,11 +30,11 @@ namespace Travel
         private void InitializeComponent()
         {
             this.supplierGrid = new System.Windows.Forms.DataGridView();
+            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addBtn = new System.Windows.Forms.Button();
             this.modifyBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.supplierGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +50,23 @@ namespace Travel
             this.supplierGrid.RowHeadersWidth = 51;
             this.supplierGrid.Size = new System.Drawing.Size(508, 252);
             this.supplierGrid.TabIndex = 0;
+            // 
+            // supplierID
+            // 
+            this.supplierID.DataPropertyName = "SupplierId";
+            this.supplierID.HeaderText = "Supplier ID";
+            this.supplierID.MinimumWidth = 6;
+            this.supplierID.Name = "supplierID";
+            this.supplierID.ReadOnly = true;
+            this.supplierID.Width = 200;
+            // 
+            // supplierName
+            // 
+            this.supplierName.DataPropertyName = "SupName";
+            this.supplierName.HeaderText = "Supplier Name";
+            this.supplierName.MinimumWidth = 6;
+            this.supplierName.Name = "supplierName";
+            this.supplierName.Width = 250;
             // 
             // addBtn
             // 
@@ -82,23 +99,7 @@ namespace Travel
             this.cancelBtn.TabIndex = 4;
             this.cancelBtn.Text = "&Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
-            // 
-            // supplierID
-            // 
-            this.supplierID.DataPropertyName = "SupplierId";
-            this.supplierID.HeaderText = "Supplier ID";
-            this.supplierID.MinimumWidth = 6;
-            this.supplierID.Name = "supplierID";
-            this.supplierID.ReadOnly = true;
-            this.supplierID.Width = 200;
-            // 
-            // supplierName
-            // 
-            this.supplierName.DataPropertyName = "SupName";
-            this.supplierName.HeaderText = "Supplier Name";
-            this.supplierName.MinimumWidth = 6;
-            this.supplierName.Name = "supplierName";
-            this.supplierName.Width = 250;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // SuppliersInfo
             // 
