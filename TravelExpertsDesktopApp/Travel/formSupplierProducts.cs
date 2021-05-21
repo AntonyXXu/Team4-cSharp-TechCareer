@@ -79,12 +79,13 @@ namespace Travel
 
         private void btnAddProducts_Click(object sender, EventArgs e)
         {
-
+            EditProductSupplier newForm = new EditProductSupplier(true, null, context);
         }
 
         private void btnEditProdSupp_Click(object sender, EventArgs e)
         {
-
+            ProductsSupplier current = getSelected();
+            EditProductSupplier newForm = new EditProductSupplier(false, current, context);
         }
     }
 }

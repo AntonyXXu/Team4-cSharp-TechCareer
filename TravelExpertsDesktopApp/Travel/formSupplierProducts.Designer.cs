@@ -29,8 +29,8 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddProducts = new System.Windows.Forms.Button();
             this.btnSuppliers = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@ namespace Travel
             this.btnAddProducts.Name = "btnAddProducts";
             this.btnAddProducts.Size = new System.Drawing.Size(136, 57);
             this.btnAddProducts.TabIndex = 9;
-            this.btnAddProducts.Text = "Add Product/Supplier Pair";
+            this.btnAddProducts.Text = "Add Product Supplier";
             this.btnAddProducts.UseVisualStyleBackColor = true;
             this.btnAddProducts.Click += new System.EventHandler(this.btnAddProducts_Click);
             // 
@@ -107,7 +107,7 @@ namespace Travel
             this.btnEditProdSupp.Name = "btnEditProdSupp";
             this.btnEditProdSupp.Size = new System.Drawing.Size(147, 57);
             this.btnEditProdSupp.TabIndex = 10;
-            this.btnEditProdSupp.Text = "Edit Product/Supplier Pair";
+            this.btnEditProdSupp.Text = "Edit Product Suppliers";
             this.btnEditProdSupp.UseVisualStyleBackColor = true;
             this.btnEditProdSupp.Click += new System.EventHandler(this.btnEditProdSupp_Click);
             // 
@@ -123,26 +123,26 @@ namespace Travel
             // ProductName
             // 
             this.ProductName.DataPropertyName = "ProdName";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.ProductName.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ProductName.DefaultCellStyle = dataGridViewCellStyle3;
             this.ProductName.HeaderText = "Product";
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
             this.ProductName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProductName.Width = 250;
+            this.ProductName.Width = 275;
             // 
             // SupplierName
             // 
             this.SupplierName.DataPropertyName = "SupName";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle4;
             this.SupplierName.HeaderText = "Supplier";
             this.SupplierName.Name = "SupplierName";
             this.SupplierName.ReadOnly = true;
             this.SupplierName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.SupplierName.Width = 250;
+            this.SupplierName.Width = 275;
             // 
             // formSupplierProducts
             // 
