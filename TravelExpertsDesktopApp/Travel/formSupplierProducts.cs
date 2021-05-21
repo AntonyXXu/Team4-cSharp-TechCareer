@@ -64,7 +64,7 @@ namespace Travel
                                     ProdName = product.ProdName,
                                     SupName = supplier.SupName
                                 }
-                                ).ToList();
+                                ).OrderBy(item => item.ProdName).ToList();
 
             dataGVProdSupp.DataSource = prodSuppList;
             try
