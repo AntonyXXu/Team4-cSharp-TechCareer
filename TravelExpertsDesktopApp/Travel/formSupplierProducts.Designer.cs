@@ -29,18 +29,18 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddProducts = new System.Windows.Forms.Button();
             this.btnSuppliers = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
-            this.dataGVPackages = new System.Windows.Forms.DataGridView();
+            this.dataGVProdSupp = new System.Windows.Forms.DataGridView();
             this.btnEditProdSupp = new System.Windows.Forms.Button();
             this.ProductSupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVPackages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVProdSupp)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -61,6 +61,7 @@ namespace Travel
             this.btnAddProducts.TabIndex = 9;
             this.btnAddProducts.Text = "Add Product/Supplier Pair";
             this.btnAddProducts.UseVisualStyleBackColor = true;
+            this.btnAddProducts.Click += new System.EventHandler(this.btnAddProducts_Click);
             // 
             // btnSuppliers
             // 
@@ -82,23 +83,23 @@ namespace Travel
             this.btnProducts.UseVisualStyleBackColor = true;
             this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
-            // dataGVPackages
+            // dataGVProdSupp
             // 
-            this.dataGVPackages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGVProdSupp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGVPackages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVPackages.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGVProdSupp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVProdSupp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductSupplierID,
             this.ProductName,
             this.SupplierName});
-            this.dataGVPackages.Location = new System.Drawing.Point(28, 26);
-            this.dataGVPackages.MultiSelect = false;
-            this.dataGVPackages.Name = "dataGVPackages";
-            this.dataGVPackages.RowTemplate.Height = 25;
-            this.dataGVPackages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGVPackages.Size = new System.Drawing.Size(726, 317);
-            this.dataGVPackages.TabIndex = 6;
+            this.dataGVProdSupp.Location = new System.Drawing.Point(28, 26);
+            this.dataGVProdSupp.MultiSelect = false;
+            this.dataGVProdSupp.Name = "dataGVProdSupp";
+            this.dataGVProdSupp.RowTemplate.Height = 25;
+            this.dataGVProdSupp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGVProdSupp.Size = new System.Drawing.Size(726, 317);
+            this.dataGVProdSupp.TabIndex = 6;
             // 
             // btnEditProdSupp
             // 
@@ -108,6 +109,7 @@ namespace Travel
             this.btnEditProdSupp.TabIndex = 10;
             this.btnEditProdSupp.Text = "Edit Product/Supplier Pair";
             this.btnEditProdSupp.UseVisualStyleBackColor = true;
+            this.btnEditProdSupp.Click += new System.EventHandler(this.btnEditProdSupp_Click);
             // 
             // ProductSupplierID
             // 
@@ -120,9 +122,9 @@ namespace Travel
             // ProductName
             // 
             this.ProductName.DataPropertyName = "ProdName";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ProductName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.ProductName.DefaultCellStyle = dataGridViewCellStyle7;
             this.ProductName.HeaderText = "Product";
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
@@ -131,9 +133,9 @@ namespace Travel
             // SupplierName
             // 
             this.SupplierName.DataPropertyName = "SupName";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle8;
             this.SupplierName.HeaderText = "Supplier";
             this.SupplierName.Name = "SupplierName";
             this.SupplierName.ReadOnly = true;
@@ -149,12 +151,12 @@ namespace Travel
             this.Controls.Add(this.btnEditProdSupp);
             this.Controls.Add(this.btnSuppliers);
             this.Controls.Add(this.btnProducts);
-            this.Controls.Add(this.dataGVPackages);
+            this.Controls.Add(this.dataGVProdSupp);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "formSupplierProducts";
-            this.Text = "Form1";
+            this.Text = "Products and Suppliers";
             this.Load += new System.EventHandler(this.formSupplierProducts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVPackages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVProdSupp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,7 +167,7 @@ namespace Travel
         private System.Windows.Forms.Button btnAddProducts;
         private System.Windows.Forms.Button btnSuppliers;
         private System.Windows.Forms.Button btnProducts;
-        private System.Windows.Forms.DataGridView dataGVPackages;
+        private System.Windows.Forms.DataGridView dataGVProdSupp;
         private System.Windows.Forms.Button btnEditProdSupp;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductSupplierID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;

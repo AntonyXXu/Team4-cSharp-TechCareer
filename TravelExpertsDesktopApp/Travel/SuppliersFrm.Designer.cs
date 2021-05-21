@@ -48,12 +48,12 @@ namespace Travel
             this.supplierGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.supplierGrid.Name = "supplierGrid";
             this.supplierGrid.RowHeadersWidth = 51;
-            this.supplierGrid.Size = new System.Drawing.Size(604, 252);
+            this.supplierGrid.Size = new System.Drawing.Size(453, 252);
             this.supplierGrid.TabIndex = 0;
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(29, 336);
+            this.addBtn.Location = new System.Drawing.Point(29, 311);
             this.addBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(82, 22);
@@ -64,7 +64,7 @@ namespace Travel
             // 
             // modifyBtn
             // 
-            this.modifyBtn.Location = new System.Drawing.Point(144, 336);
+            this.modifyBtn.Location = new System.Drawing.Point(137, 311);
             this.modifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.modifyBtn.Name = "modifyBtn";
             this.modifyBtn.Size = new System.Drawing.Size(82, 22);
@@ -75,7 +75,7 @@ namespace Travel
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(454, 336);
+            this.cancelBtn.Location = new System.Drawing.Point(400, 311);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(82, 22);
@@ -87,6 +87,7 @@ namespace Travel
             // supplierID
             // 
             this.supplierID.DataPropertyName = "SupplierId";
+            this.supplierID.Frozen = true;
             this.supplierID.HeaderText = "Supplier ID";
             this.supplierID.MinimumWidth = 6;
             this.supplierID.Name = "supplierID";
@@ -95,16 +96,17 @@ namespace Travel
             // supplierName
             // 
             this.supplierName.DataPropertyName = "SupName";
+            this.supplierName.Frozen = true;
             this.supplierName.HeaderText = "Supplier Name";
             this.supplierName.MinimumWidth = 6;
             this.supplierName.Name = "supplierName";
-            this.supplierName.Width = 450;
+            this.supplierName.Width = 300;
             // 
             // SuppliersFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 390);
+            this.ClientSize = new System.Drawing.Size(515, 359);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.addBtn);
