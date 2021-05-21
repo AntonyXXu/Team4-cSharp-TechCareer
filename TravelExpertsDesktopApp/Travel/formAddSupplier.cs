@@ -36,33 +36,21 @@ namespace Travel
             {
                 Supplier newSup = new Supplier();
                 newSup.SupName = SupplierNametxt.Text;
-                bool added = false;
-                while (!added)
-                {
-                    try
-                    {
-                        context.Suppliers.Add(newSup);
-                        added = true;
-                    }
-                    catch
-                    {
-                        newSup.SupplierId += 1;
-                    }
-                }
-
+                context.Suppliers.Add(newSup);
             }
             else
             {
                 supplier.SupName = SupplierNametxt.Text;
                 context.Suppliers.Update(supplier);
             }
-            try { context.SaveChanges(); }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during update: " + ex.Message,
-                     ex.GetType().ToString());
-                return;
-            }
+            context.SaveChanges();
+            //try { context.SaveChanges(); }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error during update: " + ex.Message,
+            //         ex.GetType().ToString());
+            //    return;
+            //}
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
