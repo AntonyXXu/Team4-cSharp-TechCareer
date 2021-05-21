@@ -33,16 +33,19 @@ namespace Travel
             comboProduct.DisplayMember = "ProdName";
             comboProduct.ValueMember = "ProductID";
             comboProduct.DataSource = context.Products.ToList();
-            comboSupplier.DisplayMember = "ProdName";
-            comboSupplier.ValueMember = "ProductID";
-            comboSupplier.DataSource = context.Products.ToList();
+            comboSupplier.DisplayMember = "SupName";
+            comboSupplier.ValueMember = "SupplierID";
+            comboSupplier.DataSource = context.Suppliers.ToList();
             if (add)
             {
                 comboProduct.SelectedIndex = 0;
+                comboSupplier.SelectedIndex = 0;
             }
             else
             {
-                comboProduct.SelectedItem = currProdSupp.ProductId;
+                comboProduct.SelectedValue = currProdSupp.ProductId;
+                comboSupplier.SelectedValue = currProdSupp.SupplierId;
+                comboProduct.Enabled = false;
             }
         }
 
@@ -53,8 +56,31 @@ namespace Travel
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-
+            var prodID = Int32.Parse(comboProduct.SelectedValue.ToString());
+            var suppID = Int32.Parse(comboSupplier.SelectedValue.ToString());
+            if (add)
+            {
+                ProductsSupplier item = new ProductsSupplier();
+                item.ProductId = prodID;
+                item.SupplierId = suppID;
+                context.ProductsSuppliers.Add(item);
+            }
+            else
+            {
+                currProdSupp.ProductId = prodID;
+                currProdSupp.SupplierId = suppID;
+                context.ProductsSuppliers.Update(currProdSupp);
+            }
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during update: " + ex.Message,
+                   ex.GetType().ToString());
+                return;
+            }
             this.Close();
         }
 

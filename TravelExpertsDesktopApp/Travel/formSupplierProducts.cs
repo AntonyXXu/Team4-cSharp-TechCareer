@@ -64,7 +64,7 @@ namespace Travel
                                     ProdName = product.ProdName,
                                     SupName = supplier.SupName
                                 }
-                                ).OrderBy(item => item.ProdName).ToList();
+                                ).OrderBy(item => item.SupName).OrderBy(item => item.ProdName).ToList();
 
             dataGVProdSupp.DataSource = prodSuppList;
             try
@@ -81,6 +81,7 @@ namespace Travel
         {
             EditProductSupplier newForm = new EditProductSupplier(true, null, context);
             newForm.ShowDialog();
+            display();
         }
 
         private void btnEditProdSupp_Click(object sender, EventArgs e)
@@ -88,6 +89,7 @@ namespace Travel
             ProductsSupplier current = getSelected();
             EditProductSupplier newForm = new EditProductSupplier(false, current, context);
             newForm.ShowDialog();
+            display();
         }
 
         private ProductsSupplier getSelected()
