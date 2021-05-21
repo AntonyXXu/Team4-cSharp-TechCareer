@@ -15,7 +15,7 @@ namespace Travel
     {
 
         public TravelExpertsContext context { get; set; }
-        public Supplier supplier { get; set; };
+        public Supplier supplier { get; set; }
         public SuppliersInfo()
         {
             InitializeComponent();
@@ -63,14 +63,14 @@ namespace Travel
 
         private void modifyBtn_Click(object sender, EventArgs e)
         {
-            Supplier current = getSelected();
-            formAddSuppliers newForm = new formAddSuppliers(false, current, context);
+            //Supplier current = getSelected();
+            //formAddSuppliers newForm = new formAddSuppliers(false, current, context);
 
-            DialogResult result = newForm.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                supplierGridView();
-            }
+            //DialogResult result = newForm.ShowDialog();
+            //if (result == DialogResult.OK)
+            //{
+            //    supplierGridView();
+            //}
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)

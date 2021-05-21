@@ -48,7 +48,7 @@ namespace Travel
             this.supplierGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.supplierGrid.Name = "supplierGrid";
             this.supplierGrid.RowHeadersWidth = 51;
-            this.supplierGrid.Size = new System.Drawing.Size(508, 252);
+            this.supplierGrid.Size = new System.Drawing.Size(604, 252);
             this.supplierGrid.TabIndex = 0;
             // 
             // addBtn
@@ -98,13 +98,13 @@ namespace Travel
             this.supplierName.HeaderText = "Supplier Name";
             this.supplierName.MinimumWidth = 6;
             this.supplierName.Name = "supplierName";
-            this.supplierName.Width = 350;
+            this.supplierName.Width = 450;
             // 
             // SuppliersInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 390);
+            this.ClientSize = new System.Drawing.Size(660, 390);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.addBtn);
