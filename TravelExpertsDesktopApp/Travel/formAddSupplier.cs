@@ -20,12 +20,7 @@ namespace Travel
         {
             InitializeComponent();
             AddSupplier = add;
-            if (add)
-            {
-                supplier = new Supplier();
-            }
-            else { supplier = current; }
-
+            supplier = current;
             context = context_passed;
         }
 
@@ -39,8 +34,22 @@ namespace Travel
 
             if (AddSupplier)
             {
-                supplier.SupName = SupplierNametxt.Text;
-                context.Suppliers.Add(supplier);
+                Supplier newSup = new Supplier();
+                newSup.SupName = SupplierNametxt.Text;
+                bool added = false;
+                while (!added)
+                {
+                    try
+                    {
+                        context.Suppliers.Add(newSup);
+                        added = true;
+                    }
+                    catch
+                    {
+                        newSup.SupplierId += 1;
+                    }
+                }
+
             }
             else
             {
