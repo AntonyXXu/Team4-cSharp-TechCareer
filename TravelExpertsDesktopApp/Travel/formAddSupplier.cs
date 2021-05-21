@@ -43,14 +43,13 @@ namespace Travel
                 supplier.SupName = SupplierNametxt.Text;
                 context.Suppliers.Update(supplier);
             }
-            context.SaveChanges();
-            //try { context.SaveChanges(); }
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error during update: " + ex.Message,
-            //         ex.GetType().ToString());
-            //    return;
-            //}
+            try { context.SaveChanges(); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during update: " + ex.Message,
+                     ex.GetType().ToString());
+                return;
+            }
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

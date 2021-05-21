@@ -13,12 +13,12 @@ using System.Configuration;
 
 namespace Travel
 {
-    public partial class Form1 : Form
+    public partial class formSupplierPackages : Form
     {
 
         TravelExpertsContext context;
 
-        public Form1()
+        public formSupplierPackages()
         {
             InitializeComponent();
             context = new TravelExpertsContext();
