@@ -48,9 +48,6 @@ namespace Travel
 
         private void display()
         {
-            //List<int> prodSupplierIDs = current.PackagesProductsSuppliers
-            //   .Select(productPkg => productPkg.ProductSupplierId).ToList();
-
             List<ProductsSupplier> productsSuppliers = context.ProductsSuppliers.ToList();
 
             var prodSuppList = (from prodSupp in context.ProductsSuppliers.ToList()
