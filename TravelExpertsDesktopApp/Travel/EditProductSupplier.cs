@@ -58,21 +58,32 @@ namespace Travel
         {
             var prodID = Int32.Parse(comboProduct.SelectedValue.ToString());
             var suppID = Int32.Parse(comboSupplier.SelectedValue.ToString());
-            if (add)
-            {
-                ProductsSupplier item = new ProductsSupplier();
-                item.ProductId = prodID;
-                item.SupplierId = suppID;
-                context.ProductsSuppliers.Add(item);
-            }
-            else
-            {
-                currProdSupp.ProductId = prodID;
-                currProdSupp.SupplierId = suppID;
-                context.ProductsSuppliers.Update(currProdSupp);
-            }
             try
             {
+                if (add)
+                {
+                    ProductsSupplier item = new ProductsSupplier();
+                    item.ProductId = prodID;
+                    item.SupplierId = suppID;
+                    if (context.ProductsSuppliers.Contains(item))
+                    {
+                        MessageBox.Show("This product already exists with this supplier");
+                        return;
+                    }
+                    context.ProductsSuppliers.Add(item);
+                }
+                else
+                {
+                    currProdSupp.ProductId = prodID;
+                    currProdSupp.SupplierId = suppID;
+                    if (context.ProductsSuppliers.Contains(currProdSupp))
+                    {
+                        MessageBox.Show("This product already exists with this supplier");
+                        return;
+                    }
+                    context.ProductsSuppliers.Update(currProdSupp);
+                }
+
                 context.SaveChanges();
             }
             catch (Exception ex)

@@ -13,6 +13,7 @@ namespace Travel
     public partial class formEditPackageProducts : Form
     {
 
+        //Initialize selected package and context
         public formEditPackageProducts(Package curr, TravelExpertsContext con)
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Travel
         private Package current;
         private TravelExpertsContext context;
 
+        //Initialize dropdown menus
         private void formEditPackageProducts_Load(object sender, EventArgs e)
         {
             lblPackageNameVal.Text = current.PkgName;
@@ -31,6 +33,7 @@ namespace Travel
             display();
         }
 
+        //Populate data grid with list of packages, products, and suppliers
         private void display()
         {
             List<int> prodSupplierIDs = current.PackagesProductsSuppliers
@@ -41,6 +44,7 @@ namespace Travel
                     .Any(prodSupplierID => prodSupplierID == prodSupplier.ProductSupplierId)
                     ).ToList();
 
+            //Multiple join statement query to get names with ID
             var packageProdSupp = (from prodSupplier in prodSuppliers
                                    join product in context.Products
                                        on prodSupplier.ProductId equals product.ProductId
@@ -54,6 +58,7 @@ namespace Travel
                                    }).ToList();
 
             dataGVPackageSuppProdList.DataSource = packageProdSupp;
+            //If there are no items, disable delete button
             try
             {
                 dataGVPackageSuppProdList.Rows[0].Selected = true;
@@ -69,6 +74,7 @@ namespace Travel
             this.Close();
         }
 
+        //Upon changing combo box, update suppliers data grid
         private void comboProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
             var prod = comboProduct.SelectedValue;
@@ -78,6 +84,7 @@ namespace Travel
             List<int> productSupplierID = currProd.ProductsSuppliers
                .Select(product => product.ProductSupplierId).ToList();
 
+            //Query join statement
             var supplierData = (from ProductsSupplier in currProd.ProductsSuppliers
                                 join supplier in context.Suppliers
                                     on ProductsSupplier.SupplierId equals supplier.SupplierId
@@ -113,12 +120,12 @@ namespace Travel
             add.ProductSupplierId = selection;
             try
             {
+                //Check if the package/product already exists
                 if (context.PackagesProductsSuppliers.Contains(add))
                 {
                     MessageBox.Show("This product already exists within this package");
                     return;
                 }
-                
                 context.PackagesProductsSuppliers.Add(add);
                 context.SaveChanges();
                 display();
@@ -131,6 +138,8 @@ namespace Travel
             }
 
         }
+
+        //Return selected packageprodsupp ID
         private PackagesProductsSupplier getSelected()
         {
             int selection = Convert.ToInt32(dataGVPackageSuppProdList.CurrentRow.Cells[2].FormattedValue);
