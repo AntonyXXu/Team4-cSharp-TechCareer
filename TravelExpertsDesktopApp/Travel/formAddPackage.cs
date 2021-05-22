@@ -24,6 +24,8 @@ namespace Travel
         private bool add;
         private Package current { get; set; }
         private TravelExpertsContext context;
+
+        //If editing, initialize form data
         private void formAddPackage_Load(object sender, EventArgs e)
         {
             if (!add)
@@ -47,6 +49,7 @@ namespace Travel
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //perform data validation on the form            
             decimal basePrice, commission;
             DateTime start, end;
             if (rtxtDesc.Text == "" ||
@@ -86,6 +89,7 @@ namespace Travel
                 return;
             }
 
+            //Create a new package
             if (add)
             {
                 Package newPkg = new Package();
@@ -97,6 +101,7 @@ namespace Travel
                 newPkg.PkgEndDate = end;
                 context.Packages.Add(newPkg);
             }
+            //Update selected package
             else
             {
                 current.PkgDesc = rtxtDesc.Text;
@@ -106,7 +111,10 @@ namespace Travel
                 current.PkgStartDate = start;
                 current.PkgEndDate = end;
             }
-            try { context.SaveChanges(); }
+            try
+            {
+                context.SaveChanges();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error during update: " + ex.Message,

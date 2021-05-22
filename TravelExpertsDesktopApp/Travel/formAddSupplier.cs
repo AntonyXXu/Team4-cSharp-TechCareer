@@ -26,18 +26,21 @@ namespace Travel
 
         private void acceptBtn_Click(object sender, EventArgs e)
         {
+            //Ensure box is filled out
             if (SupplierNametxt.Text == "")
             {
                 MessageBox.Show("The supplier name must not be empty");
                 return;
             }
 
+            //Add new supplier
             if (AddSupplier)
             {
                 Supplier newSup = new Supplier();
                 newSup.SupName = SupplierNametxt.Text;
                 context.Suppliers.Add(newSup);
             }
+            //Update existing
             else
             {
                 supplier.SupName = SupplierNametxt.Text;

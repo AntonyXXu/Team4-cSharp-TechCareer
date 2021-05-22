@@ -16,6 +16,7 @@ namespace Travel
         private TravelExpertsContext context;
         private bool add;
         ProductsSupplier currProdSupp;
+        //Construct with context, selected item, and check if it's adding/editing
         public EditProductSupplier(bool added, ProductsSupplier current, TravelExpertsContext ctx)
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace Travel
             }
         }
 
+        //Initialize views
         private void EditProductSupplier_Load(object sender, EventArgs e)
         {
             comboProduct.DisplayMember = "ProdName";
@@ -36,6 +38,8 @@ namespace Travel
             comboSupplier.DisplayMember = "SupName";
             comboSupplier.ValueMember = "SupplierID";
             comboSupplier.DataSource = context.Suppliers.ToList();
+            //If adding, comboboxes should be default
+            //If editing, combo boxes should be the edited item
             if (add)
             {
                 comboProduct.SelectedIndex = 0;
@@ -65,6 +69,7 @@ namespace Travel
                     ProductsSupplier item = new ProductsSupplier();
                     item.ProductId = prodID;
                     item.SupplierId = suppID;
+                    //Check if item already exists
                     if (context.ProductsSuppliers.Contains(item))
                     {
                         MessageBox.Show("This product already exists with this supplier");
@@ -76,6 +81,7 @@ namespace Travel
                 {
                     currProdSupp.ProductId = prodID;
                     currProdSupp.SupplierId = suppID;
+                    //Check if item already exists
                     if (context.ProductsSuppliers.Contains(currProdSupp))
                     {
                         MessageBox.Show("This product already exists with this supplier");
@@ -94,7 +100,5 @@ namespace Travel
             }
             this.Close();
         }
-
-
     }
 }

@@ -20,18 +20,21 @@ namespace Travel
             InitializeComponent();
             context = ctx;
         }
+
+        //Return selected supplier
         private Supplier getSelected()
         {
             int selection = Convert.ToInt32(supplierGrid.CurrentRow.Cells[0].FormattedValue);
             return context.Suppliers.Find(selection);
         }
 
+
         private void Suppliers_Load(object sender, EventArgs e)
         {
             supplierGridView();
         }
 
-        //private void supplierGrid
+        //Initialize suppliers for view
         private void supplierGridView()
         {
             supplierGrid.AutoGenerateColumns = false;

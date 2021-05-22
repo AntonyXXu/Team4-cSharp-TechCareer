@@ -46,6 +46,7 @@ namespace Travel
             display();
         }
 
+        //Load all products and supplier pairings with their names
         private void display()
         {
             List<ProductsSupplier> productsSuppliers = context.ProductsSuppliers.ToList();
