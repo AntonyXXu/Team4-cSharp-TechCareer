@@ -51,25 +51,29 @@ namespace Travel
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(440, 61);
+            this.lblProductName.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProductName.Location = new System.Drawing.Point(440, 81);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(49, 15);
+            this.lblProductName.Size = new System.Drawing.Size(55, 21);
             this.lblProductName.TabIndex = 0;
             this.lblProductName.Text = "Product";
             // 
             // lblPackageNameVal
             // 
             this.lblPackageNameVal.AutoSize = true;
-            this.lblPackageNameVal.Location = new System.Drawing.Point(156, 24);
+            this.lblPackageNameVal.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPackageNameVal.Location = new System.Drawing.Point(172, 32);
             this.lblPackageNameVal.Name = "lblPackageNameVal";
-            this.lblPackageNameVal.Size = new System.Drawing.Size(0, 15);
+            this.lblPackageNameVal.Size = new System.Drawing.Size(0, 26);
             this.lblPackageNameVal.TabIndex = 1;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(745, 401);
+            this.btnExit.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Location = new System.Drawing.Point(725, 535);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(95, 49);
+            this.btnExit.Size = new System.Drawing.Size(95, 65);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -82,12 +86,13 @@ namespace Travel
             this.pkgSupID,
             this.colSupplier,
             this.colProduct});
-            this.dataGVPackageSuppProdList.Location = new System.Drawing.Point(26, 62);
+            this.dataGVPackageSuppProdList.Location = new System.Drawing.Point(26, 83);
+            this.dataGVPackageSuppProdList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGVPackageSuppProdList.MultiSelect = false;
             this.dataGVPackageSuppProdList.Name = "dataGVPackageSuppProdList";
             this.dataGVPackageSuppProdList.RowTemplate.Height = 25;
             this.dataGVPackageSuppProdList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGVPackageSuppProdList.Size = new System.Drawing.Size(393, 388);
+            this.dataGVPackageSuppProdList.Size = new System.Drawing.Size(393, 517);
             this.dataGVPackageSuppProdList.TabIndex = 3;
             // 
             // pkgSupID
@@ -117,35 +122,40 @@ namespace Travel
             // comboProduct
             // 
             this.comboProduct.FormattingEnabled = true;
-            this.comboProduct.Location = new System.Drawing.Point(440, 79);
+            this.comboProduct.Location = new System.Drawing.Point(440, 105);
+            this.comboProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboProduct.Name = "comboProduct";
-            this.comboProduct.Size = new System.Drawing.Size(400, 23);
+            this.comboProduct.Size = new System.Drawing.Size(400, 28);
             this.comboProduct.TabIndex = 4;
             this.comboProduct.SelectedIndexChanged += new System.EventHandler(this.comboProduct_SelectedIndexChanged);
             // 
             // lblPackageName
             // 
             this.lblPackageName.AutoSize = true;
-            this.lblPackageName.Location = new System.Drawing.Point(26, 24);
+            this.lblPackageName.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPackageName.Location = new System.Drawing.Point(26, 32);
             this.lblPackageName.Name = "lblPackageName";
-            this.lblPackageName.Size = new System.Drawing.Size(86, 15);
+            this.lblPackageName.Size = new System.Drawing.Size(128, 26);
             this.lblPackageName.TabIndex = 0;
             this.lblPackageName.Text = "Package Name";
             // 
             // lblSupplierName
             // 
             this.lblSupplierName.AutoSize = true;
-            this.lblSupplierName.Location = new System.Drawing.Point(440, 122);
+            this.lblSupplierName.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSupplierName.Location = new System.Drawing.Point(440, 163);
             this.lblSupplierName.Name = "lblSupplierName";
-            this.lblSupplierName.Size = new System.Drawing.Size(50, 15);
+            this.lblSupplierName.Size = new System.Drawing.Size(60, 21);
             this.lblSupplierName.TabIndex = 0;
             this.lblSupplierName.Text = "Supplier";
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(440, 401);
+            this.btnAddProduct.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddProduct.Location = new System.Drawing.Point(460, 535);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(87, 49);
+            this.btnAddProduct.Size = new System.Drawing.Size(87, 65);
             this.btnAddProduct.TabIndex = 2;
             this.btnAddProduct.Text = "Add Package";
             this.btnAddProduct.UseVisualStyleBackColor = true;
@@ -153,9 +163,11 @@ namespace Travel
             // 
             // btnDeleteSelected
             // 
-            this.btnDeleteSelected.Location = new System.Drawing.Point(546, 401);
+            this.btnDeleteSelected.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteSelected.Location = new System.Drawing.Point(584, 535);
+            this.btnDeleteSelected.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteSelected.Name = "btnDeleteSelected";
-            this.btnDeleteSelected.Size = new System.Drawing.Size(99, 49);
+            this.btnDeleteSelected.Size = new System.Drawing.Size(99, 65);
             this.btnDeleteSelected.TabIndex = 2;
             this.btnDeleteSelected.Text = "Delete Package";
             this.btnDeleteSelected.UseVisualStyleBackColor = true;
@@ -167,11 +179,12 @@ namespace Travel
             this.dataGVSuppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.SupplierName});
-            this.dataGVSuppliers.Location = new System.Drawing.Point(440, 141);
+            this.dataGVSuppliers.Location = new System.Drawing.Point(440, 188);
+            this.dataGVSuppliers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGVSuppliers.Name = "dataGVSuppliers";
             this.dataGVSuppliers.RowTemplate.Height = 25;
             this.dataGVSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGVSuppliers.Size = new System.Drawing.Size(400, 238);
+            this.dataGVSuppliers.Size = new System.Drawing.Size(400, 317);
             this.dataGVSuppliers.TabIndex = 5;
             // 
             // ID
@@ -192,9 +205,10 @@ namespace Travel
             // 
             // formEditPackageProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 491);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(872, 648);
             this.Controls.Add(this.dataGVSuppliers);
             this.Controls.Add(this.comboProduct);
             this.Controls.Add(this.dataGVPackageSuppProdList);
@@ -205,6 +219,8 @@ namespace Travel
             this.Controls.Add(this.lblPackageName);
             this.Controls.Add(this.lblSupplierName);
             this.Controls.Add(this.lblProductName);
+            this.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "formEditPackageProducts";
             this.Text = "Add Products to the selected package";
             this.Load += new System.EventHandler(this.formEditPackageProducts_Load);

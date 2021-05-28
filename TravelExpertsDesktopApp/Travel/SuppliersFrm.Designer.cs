@@ -30,11 +30,11 @@ namespace Travel
         private void InitializeComponent()
         {
             this.supplierGrid = new System.Windows.Forms.DataGridView();
+            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addBtn = new System.Windows.Forms.Button();
             this.modifyBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.supplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.supplierGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,45 +44,12 @@ namespace Travel
             this.supplierGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.supplierID,
             this.supplierName});
-            this.supplierGrid.Location = new System.Drawing.Point(29, 34);
-            this.supplierGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.supplierGrid.Location = new System.Drawing.Point(37, 54);
+            this.supplierGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.supplierGrid.Name = "supplierGrid";
             this.supplierGrid.RowHeadersWidth = 51;
-            this.supplierGrid.Size = new System.Drawing.Size(453, 252);
+            this.supplierGrid.Size = new System.Drawing.Size(582, 403);
             this.supplierGrid.TabIndex = 0;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(29, 311);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(82, 22);
-            this.addBtn.TabIndex = 1;
-            this.addBtn.Text = "&Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // modifyBtn
-            // 
-            this.modifyBtn.Location = new System.Drawing.Point(137, 311);
-            this.modifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.modifyBtn.Name = "modifyBtn";
-            this.modifyBtn.Size = new System.Drawing.Size(82, 22);
-            this.modifyBtn.TabIndex = 2;
-            this.modifyBtn.Text = "&Modify";
-            this.modifyBtn.UseVisualStyleBackColor = true;
-            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Location = new System.Drawing.Point(400, 311);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(82, 22);
-            this.cancelBtn.TabIndex = 4;
-            this.cancelBtn.Text = "&Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // supplierID
             // 
@@ -102,16 +69,51 @@ namespace Travel
             this.supplierName.Name = "supplierName";
             this.supplierName.Width = 300;
             // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(63, 488);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(110, 45);
+            this.addBtn.TabIndex = 1;
+            this.addBtn.Text = "&Add";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // modifyBtn
+            // 
+            this.modifyBtn.Location = new System.Drawing.Point(211, 488);
+            this.modifyBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.modifyBtn.Name = "modifyBtn";
+            this.modifyBtn.Size = new System.Drawing.Size(110, 45);
+            this.modifyBtn.TabIndex = 2;
+            this.modifyBtn.Text = "&Modify";
+            this.modifyBtn.UseVisualStyleBackColor = true;
+            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Location = new System.Drawing.Point(468, 488);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(110, 45);
+            this.cancelBtn.TabIndex = 4;
+            this.cancelBtn.Text = "&Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // SuppliersFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 359);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(662, 574);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.supplierGrid);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "SuppliersFrm";
             this.Text = "Suppliers Info";
             this.Load += new System.EventHandler(this.Suppliers_Load);

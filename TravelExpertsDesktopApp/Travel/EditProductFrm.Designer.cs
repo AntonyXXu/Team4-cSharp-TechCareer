@@ -39,47 +39,50 @@ namespace Travel
             // 
             // productIdtxt
             // 
-            this.productIdtxt.Location = new System.Drawing.Point(108, 33);
+            this.productIdtxt.Location = new System.Drawing.Point(143, 47);
+            this.productIdtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.productIdtxt.Name = "productIdtxt";
             this.productIdtxt.ReadOnly = true;
-            this.productIdtxt.Size = new System.Drawing.Size(78, 23);
+            this.productIdtxt.Size = new System.Drawing.Size(78, 25);
             this.productIdtxt.TabIndex = 0;
             this.productIdtxt.Tag = "Product ID";
             // 
             // productNametxt
             // 
-            this.productNametxt.Location = new System.Drawing.Point(108, 81);
+            this.productNametxt.Location = new System.Drawing.Point(143, 111);
+            this.productNametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.productNametxt.Name = "productNametxt";
-            this.productNametxt.Size = new System.Drawing.Size(221, 23);
+            this.productNametxt.Size = new System.Drawing.Size(221, 25);
             this.productNametxt.TabIndex = 1;
             this.productNametxt.Tag = "Product Name";
             // 
             // productIdLbl
             // 
             this.productIdLbl.AutoSize = true;
-            this.productIdLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.productIdLbl.Location = new System.Drawing.Point(16, 36);
+            this.productIdLbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.productIdLbl.Location = new System.Drawing.Point(16, 48);
             this.productIdLbl.Name = "productIdLbl";
-            this.productIdLbl.Size = new System.Drawing.Size(67, 15);
+            this.productIdLbl.Size = new System.Drawing.Size(84, 24);
             this.productIdLbl.TabIndex = 2;
             this.productIdLbl.Text = "Product ID";
             // 
             // productnameLbl
             // 
             this.productnameLbl.AutoSize = true;
-            this.productnameLbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.productnameLbl.Location = new System.Drawing.Point(16, 84);
+            this.productnameLbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.productnameLbl.Location = new System.Drawing.Point(16, 112);
             this.productnameLbl.Name = "productnameLbl";
-            this.productnameLbl.Size = new System.Drawing.Size(87, 15);
+            this.productnameLbl.Size = new System.Drawing.Size(109, 24);
             this.productnameLbl.TabIndex = 3;
             this.productnameLbl.Text = "Product Name";
             // 
             // acceptBtn
             // 
-            this.acceptBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.acceptBtn.Location = new System.Drawing.Point(111, 145);
+            this.acceptBtn.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.acceptBtn.Location = new System.Drawing.Point(66, 181);
+            this.acceptBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.acceptBtn.Name = "acceptBtn";
-            this.acceptBtn.Size = new System.Drawing.Size(75, 32);
+            this.acceptBtn.Size = new System.Drawing.Size(75, 43);
             this.acceptBtn.TabIndex = 4;
             this.acceptBtn.Text = "Accept";
             this.acceptBtn.UseVisualStyleBackColor = true;
@@ -87,10 +90,11 @@ namespace Travel
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(257, 145);
+            this.cancelBtn.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.Location = new System.Drawing.Point(212, 181);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(75, 32);
+            this.cancelBtn.Size = new System.Drawing.Size(75, 43);
             this.cancelBtn.TabIndex = 5;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
@@ -98,15 +102,18 @@ namespace Travel
             // 
             // editProductFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 206);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(385, 269);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.acceptBtn);
             this.Controls.Add(this.productnameLbl);
             this.Controls.Add(this.productIdLbl);
             this.Controls.Add(this.productNametxt);
             this.Controls.Add(this.productIdtxt);
+            this.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "editProductFrm";
             this.Text = "Edit Product";
             this.Load += new System.EventHandler(this.editProductFrm_Load);
