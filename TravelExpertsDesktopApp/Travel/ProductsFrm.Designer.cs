@@ -85,7 +85,7 @@ namespace Travel
             // 
             // EditBtn
             // 
-            this.EditBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EditBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EditBtn.Location = new System.Drawing.Point(146, 352);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(80, 32);
@@ -96,7 +96,7 @@ namespace Travel
             // 
             // exitBtn
             // 
-            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.Location = new System.Drawing.Point(287, 352);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(80, 32);
@@ -117,7 +117,7 @@ namespace Travel
             // 
             // addBtn
             // 
-            this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.addBtn.Location = new System.Drawing.Point(54, 352);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(80, 32);
@@ -130,7 +130,7 @@ namespace Travel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(399, 396);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.TitleLbl);
