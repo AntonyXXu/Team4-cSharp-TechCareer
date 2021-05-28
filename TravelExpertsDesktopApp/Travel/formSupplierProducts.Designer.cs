@@ -29,25 +29,27 @@ namespace Travel
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddProducts = new System.Windows.Forms.Button();
             this.btnSuppliers = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.dataGVProdSupp = new System.Windows.Forms.DataGridView();
-            this.btnEditProdSupp = new System.Windows.Forms.Button();
             this.ProductSupplierID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditProdSupp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGVProdSupp)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(645, 380);
+            this.btnExit.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Location = new System.Drawing.Point(645, 507);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(109, 57);
+            this.btnExit.Size = new System.Drawing.Size(109, 76);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -55,9 +57,11 @@ namespace Travel
             // 
             // btnAddProducts
             // 
-            this.btnAddProducts.Location = new System.Drawing.Point(307, 380);
+            this.btnAddProducts.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddProducts.Location = new System.Drawing.Point(307, 507);
+            this.btnAddProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddProducts.Name = "btnAddProducts";
-            this.btnAddProducts.Size = new System.Drawing.Size(136, 57);
+            this.btnAddProducts.Size = new System.Drawing.Size(136, 76);
             this.btnAddProducts.TabIndex = 9;
             this.btnAddProducts.Text = "Add Product Supplier";
             this.btnAddProducts.UseVisualStyleBackColor = true;
@@ -65,9 +69,11 @@ namespace Travel
             // 
             // btnSuppliers
             // 
-            this.btnSuppliers.Location = new System.Drawing.Point(173, 380);
+            this.btnSuppliers.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSuppliers.Location = new System.Drawing.Point(173, 507);
+            this.btnSuppliers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSuppliers.Name = "btnSuppliers";
-            this.btnSuppliers.Size = new System.Drawing.Size(114, 57);
+            this.btnSuppliers.Size = new System.Drawing.Size(114, 76);
             this.btnSuppliers.TabIndex = 10;
             this.btnSuppliers.Text = "View/Edit List of Suppliers";
             this.btnSuppliers.UseVisualStyleBackColor = true;
@@ -75,9 +81,11 @@ namespace Travel
             // 
             // btnProducts
             // 
-            this.btnProducts.Location = new System.Drawing.Point(28, 380);
+            this.btnProducts.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnProducts.Location = new System.Drawing.Point(28, 507);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(121, 57);
+            this.btnProducts.Size = new System.Drawing.Size(121, 76);
             this.btnProducts.TabIndex = 11;
             this.btnProducts.Text = "View/Edit List of Products";
             this.btnProducts.UseVisualStyleBackColor = true;
@@ -93,23 +101,14 @@ namespace Travel
             this.ProductSupplierID,
             this.ProductName,
             this.SupplierName});
-            this.dataGVProdSupp.Location = new System.Drawing.Point(28, 26);
+            this.dataGVProdSupp.Location = new System.Drawing.Point(28, 35);
+            this.dataGVProdSupp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGVProdSupp.MultiSelect = false;
             this.dataGVProdSupp.Name = "dataGVProdSupp";
             this.dataGVProdSupp.RowTemplate.Height = 25;
             this.dataGVProdSupp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGVProdSupp.Size = new System.Drawing.Size(726, 317);
+            this.dataGVProdSupp.Size = new System.Drawing.Size(725, 423);
             this.dataGVProdSupp.TabIndex = 6;
-            // 
-            // btnEditProdSupp
-            // 
-            this.btnEditProdSupp.Location = new System.Drawing.Point(468, 380);
-            this.btnEditProdSupp.Name = "btnEditProdSupp";
-            this.btnEditProdSupp.Size = new System.Drawing.Size(147, 57);
-            this.btnEditProdSupp.TabIndex = 10;
-            this.btnEditProdSupp.Text = "Edit Product Suppliers";
-            this.btnEditProdSupp.UseVisualStyleBackColor = true;
-            this.btnEditProdSupp.Click += new System.EventHandler(this.btnEditProdSupp_Click);
             // 
             // ProductSupplierID
             // 
@@ -123,9 +122,9 @@ namespace Travel
             // ProductName
             // 
             this.ProductName.DataPropertyName = "ProdName";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ProductName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ProductName.DefaultCellStyle = dataGridViewCellStyle1;
             this.ProductName.HeaderText = "Product";
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
@@ -135,27 +134,40 @@ namespace Travel
             // SupplierName
             // 
             this.SupplierName.DataPropertyName = "SupName";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle2;
             this.SupplierName.HeaderText = "Supplier";
             this.SupplierName.Name = "SupplierName";
             this.SupplierName.ReadOnly = true;
             this.SupplierName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.SupplierName.Width = 275;
             // 
+            // btnEditProdSupp
+            // 
+            this.btnEditProdSupp.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditProdSupp.Location = new System.Drawing.Point(468, 507);
+            this.btnEditProdSupp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEditProdSupp.Name = "btnEditProdSupp";
+            this.btnEditProdSupp.Size = new System.Drawing.Size(147, 76);
+            this.btnEditProdSupp.TabIndex = 10;
+            this.btnEditProdSupp.Text = "Edit Product Suppliers";
+            this.btnEditProdSupp.UseVisualStyleBackColor = true;
+            this.btnEditProdSupp.Click += new System.EventHandler(this.btnEditProdSupp_Click);
+            // 
             // formSupplierProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 474);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(799, 632);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddProducts);
             this.Controls.Add(this.btnEditProdSupp);
             this.Controls.Add(this.btnSuppliers);
             this.Controls.Add(this.btnProducts);
             this.Controls.Add(this.dataGVProdSupp);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "formSupplierProducts";
             this.Text = "Products and Suppliers";
             this.Load += new System.EventHandler(this.formSupplierProducts_Load);
