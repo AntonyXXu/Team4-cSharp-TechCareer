@@ -13,6 +13,8 @@ namespace Travel
     public partial class formEditPackageProducts : Form
     {
 
+        private Package current { get; set; }
+        private TravelExpertsContext context { get; set; }
         //Initialize selected package and context
         public formEditPackageProducts(Package curr, TravelExpertsContext con)
         {
@@ -20,8 +22,7 @@ namespace Travel
             current = curr;
             context = con;
         }
-        private Package current;
-        private TravelExpertsContext context;
+
 
         //Initialize dropdown menus
         private void formEditPackageProducts_Load(object sender, EventArgs e)
@@ -36,7 +37,9 @@ namespace Travel
         //Populate data grid with list of packages, products, and suppliers
         private void display()
         {
-            List<int> prodSupplierIDs = current.PackagesProductsSuppliers
+            int currID = current.PackageId;
+            List<int> prodSupplierIDs = context.PackagesProductsSuppliers
+                .Where(pkg => pkg.PackageId == currID)
                 .Select(productPkg => productPkg.ProductSupplierId).ToList();
 
             List<ProductsSupplier> prodSuppliers = context.ProductsSuppliers
